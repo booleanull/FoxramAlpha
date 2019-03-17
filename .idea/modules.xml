@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/foxramalpha.iml" filepath="$PROJECT_DIR$/.idea/modules/foxramalpha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/foxramalpha_main.iml" filepath="$PROJECT_DIR$/.idea/modules/foxramalpha_main.iml" group="foxramalpha" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/foxramalpha_test.iml" filepath="$PROJECT_DIR$/.idea/modules/foxramalpha_test.iml" group="foxramalpha" />
+    </modules>
+  </component>
+</project>
