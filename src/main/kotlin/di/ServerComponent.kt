@@ -10,8 +10,8 @@ import javax.inject.Singleton
  */
 
 @Singleton
-@Component(modules = [(GsonModule::class)])
-interface ApplicationComponent {
+@Component(modules = [GsonModule::class])
+interface ServerComponent {
 
     fun inject(testController: TestController)
     fun inject(solutionController: SolutionController)

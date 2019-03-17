@@ -2,9 +2,11 @@ package controllers.solution
 
 import com.google.gson.Gson
 import controllers.base.BaseController
+import controllers.base.responses.BadRequestErrorResponse
 import controllers.solution.models.Solution
 import controllers.solution.responses.SolutionOkResponse
-import daggerApplicationComponent
+import daggerServerComponent
+import solution.SolutionGenerator
 import spark.Spark.post
 import javax.inject.Inject
 
@@ -18,7 +20,7 @@ class SolutionController: BaseController {
     lateinit var gson: Gson
 
     init {
-        daggerApplicationComponent.inject(this)
+        daggerServerComponent.inject(this)
     }
 
     override fun start() {
@@ -30,7 +32,10 @@ class SolutionController: BaseController {
         post("/api/solution", { req, res ->
             val data = gson.fromJson<Solution>(req.body(), Solution::class.java)
 
-            return@post SolutionOkResponse(data.number.toString())
+            val solutionGenerator = SolutionGenerator()
+            val solution = solutionGenerator.generate(data.type) ?: return@post BadRequestErrorResponse
+
+            return@post SolutionOkResponse(solution.makeResult(data))
         }, gson::toJson)
     }
 }

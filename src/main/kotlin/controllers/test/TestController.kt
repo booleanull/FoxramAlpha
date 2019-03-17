@@ -4,7 +4,7 @@ import com.google.gson.Gson
 import controllers.base.BaseController
 import controllers.test.models.TestRequest
 import controllers.test.responses.TestOkResponse
-import daggerApplicationComponent
+import daggerServerComponent
 import spark.Spark.post
 import javax.inject.Inject
 
@@ -18,7 +18,7 @@ class TestController: BaseController {
     lateinit var gson: Gson
 
     init {
-        daggerApplicationComponent.inject(this)
+        daggerServerComponent.inject(this)
     }
 
     override fun start() {

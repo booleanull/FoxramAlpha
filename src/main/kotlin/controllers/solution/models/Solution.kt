@@ -9,6 +9,8 @@ import com.google.gson.annotations.Expose
 data class Solution(@Expose
                     val type: String,
                     @Expose
-                    val items: List<String>,
+                    val number1: String,
                     @Expose
-                    val number: Int)
+                    val number2: String,
+                    @Expose
+                    val numeral: Int)

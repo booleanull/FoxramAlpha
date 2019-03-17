@@ -1,9 +1,7 @@
-package solution.NModule
-
-import solution.base.BaseModule
+package solution.nmodule
 
 /**
 @author boolenull on 17.03.2019
  */
 
-interface NModule: BaseModule
+interface NModule

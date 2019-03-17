@@ -1,13 +1,20 @@
 import controllers.solution.SolutionController
+import controllers.solution.models.Solution
 import controllers.test.TestController
-import di.DaggerApplicationComponent
+import di.DaggerServerComponent
+import di.DaggerSolutionComponent
+import solution.nmodule.N4Solution
 import spark.Spark.port
 
 /**
 @author boolenull on 17.03.2019
  */
 
-val daggerApplicationComponent = DaggerApplicationComponent
+val daggerServerComponent = DaggerServerComponent
+        .builder()
+        .build()
+
+val daggerSolutionComponent = DaggerSolutionComponent
         .builder()
         .build()
 
