@@ -1,13 +1,13 @@
+import controllers.settings.SettingsController
 import controllers.solution.SolutionController
-import controllers.solution.models.Solution
 import controllers.test.TestController
 import di.DaggerServerComponent
 import di.DaggerSolutionComponent
-import solution.nmodule.N4Solution
 import spark.Spark.port
+import java.net.InetAddress
 
 /**
-@author boolenull on 17.03.2019
+@author boolenull on 18.03.2019
  */
 
 val daggerServerComponent = DaggerServerComponent
@@ -25,8 +25,15 @@ fun main(args: Array<String>) {
         return
     }
 
-    port(args[0].toInt())
+    val port = args[0].toInt()
+    port(port)
+    println("You port - $port")
 
-    val contollers = listOf(SolutionController(), TestController())
-    contollers.forEach { it.start() }
+    val ip = InetAddress.getLocalHost()
+    println("Current IP address : " + ip.hostAddress)
+
+    val controllers = listOf(SettingsController(),
+            SolutionController(),
+            TestController())
+    controllers.forEach { it.start() }
 }

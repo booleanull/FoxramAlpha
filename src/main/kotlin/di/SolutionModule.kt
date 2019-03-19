@@ -2,10 +2,7 @@ package di
 
 import dagger.Module
 import dagger.Provides
-import solution.nmodule.N1Solution
-import solution.nmodule.N2Solution
-import solution.nmodule.N3Solution
-import solution.nmodule.N4Solution
+import solution.nmodule.*
 import javax.inject.Singleton
 
 /**
@@ -37,5 +34,65 @@ class SolutionModule {
     @Provides
     fun provideN4Solution(): N4Solution {
         return N4Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideN5Solution(): N5Solution {
+        return N5Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideN6Solution(): N6Solution {
+        return N6Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideN7Solution(): N7Solution {
+        return N7Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideN8Solution(): N8Solution {
+        return N8Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideN9Solution(): N9Solution {
+        return N9Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideN10Solution(): N10Solution {
+        return N10Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideN11Solution(): N11Solution {
+        return N11Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideN12Solution(): N12Solution {
+        return N12Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideN13Solution(): N13Solution {
+        return N13Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideN14Solution(): N14Solution {
+        return N14Solution()
     }
 }

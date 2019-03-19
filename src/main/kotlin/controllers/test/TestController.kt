@@ -5,6 +5,7 @@ import controllers.base.BaseController
 import controllers.test.models.TestRequest
 import controllers.test.responses.TestOkResponse
 import daggerServerComponent
+import spark.Spark
 import spark.Spark.post
 import javax.inject.Inject
 
@@ -24,6 +25,7 @@ class TestController: BaseController {
     override fun start() {
         println("TestController is enabled")
         initTestPostResponse()
+        initTestStart()
     }
 
     private fun initTestPostResponse() {
@@ -32,6 +34,12 @@ class TestController: BaseController {
 
             val stringToReturn = "You got from server ${data.message}"
             TestOkResponse(stringToReturn)
+        }, gson::toJson)
+    }
+
+    private fun initTestStart() {
+        Spark.get("/", { req, res ->
+            "Hello"
         }, gson::toJson)
     }
 }
