@@ -14,6 +14,12 @@ class SolutionModule {
 
     @Singleton
     @Provides
+    fun provideN0Solution(): N0Solution {
+        return N0Solution()
+    }
+
+    @Singleton
+    @Provides
     fun provideN1Solution(): N1Solution {
         return N1Solution()
     }

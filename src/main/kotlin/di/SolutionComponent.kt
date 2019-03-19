@@ -2,10 +2,7 @@ package di
 
 import dagger.Component
 import solution.SolutionGenerator
-import solution.nmodule.N10Solution
-import solution.nmodule.N14Solution
-import solution.nmodule.N5Solution
-import solution.nmodule.N9Solution
+import solution.nmodule.*
 import javax.inject.Singleton
 
 /**
@@ -20,5 +17,7 @@ interface SolutionComponent {
     fun inject(n5Solution: N5Solution)
     fun inject(n9Solution: N9Solution)
     fun inject(n10Solution: N10Solution)
+    fun inject(n11Solution: N11Solution)
+    fun inject(n12Solution: N12Solution)
     fun inject(n14Solution: N14Solution)
 }

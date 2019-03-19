@@ -25,21 +25,15 @@ class TestController: BaseController {
     override fun start() {
         println("TestController is enabled")
         initTestPostResponse()
-        initTestStart()
     }
 
     private fun initTestPostResponse() {
         post("/api/test", { req, res ->
+            println("Connected from ${req.ip()}")
             val data = gson.fromJson(req.body(), TestRequest::class.java)
 
             val stringToReturn = "You got from server ${data.message}"
             TestOkResponse(stringToReturn)
-        }, gson::toJson)
-    }
-
-    private fun initTestStart() {
-        Spark.get("/", { req, res ->
-            "Hello"
         }, gson::toJson)
     }
 }

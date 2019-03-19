@@ -12,6 +12,8 @@ import javax.inject.Inject
 class SolutionGenerator {
 
     @Inject
+    lateinit var n0Solution: N0Solution
+    @Inject
     lateinit var n1Solution: N1Solution
     @Inject
     lateinit var n2Solution: N2Solution
@@ -46,6 +48,7 @@ class SolutionGenerator {
 
     fun generate(type: String): BaseSolution? {
         return when(type) {
+            "N-0" -> n0Solution
             "N-1" -> n1Solution
             "N-2" -> n2Solution
             "N-3" -> n3Solution

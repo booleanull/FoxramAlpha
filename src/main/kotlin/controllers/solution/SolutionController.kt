@@ -30,6 +30,7 @@ class SolutionController: BaseController {
 
     private fun initSolution() {
         post("/api/solution", { req, res ->
+            println("Connected from ${req.ip()}")
             val data = gson.fromJson<Solution>(req.body(), Solution::class.java)
 
             val solutionGenerator = SolutionGenerator()

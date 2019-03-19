@@ -3,8 +3,12 @@ import controllers.solution.SolutionController
 import controllers.test.TestController
 import di.DaggerServerComponent
 import di.DaggerSolutionComponent
+import solution.nmodule.N4Solution
+import solution.nmodule.Natural
 import spark.Spark.port
+import java.math.BigInteger
 import java.net.InetAddress
+import javax.inject.Inject
 
 /**
 @author boolenull on 18.03.2019
@@ -31,6 +35,7 @@ fun main(args: Array<String>) {
 
     val ip = InetAddress.getLocalHost()
     println("Current IP address : " + ip.hostAddress)
+    println("Version is 1.0")
 
     val controllers = listOf(SettingsController(),
             SolutionController(),

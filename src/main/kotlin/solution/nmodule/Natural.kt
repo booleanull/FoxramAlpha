@@ -1,6 +1,5 @@
 package solution.nmodule
 
-import javafx.util.converter.BigIntegerStringConverter
 import java.math.BigInteger
 
 /**
@@ -9,5 +8,5 @@ import java.math.BigInteger
 
 class Natural(var value: BigInteger) {
 
-    constructor(value: String): this(BigIntegerStringConverter().fromString(value))
+    constructor(value: String): this(BigInteger(value))
 }

@@ -13,7 +13,7 @@ import javax.inject.Inject
 class N7Solution: BaseSolution, NModule {
 
     override fun makeResult(solution: Solution): String {
-        return mulriplyNaturalWithTen(Natural(solution.number1), solution.digit).toString()
+        return mulriplyNaturalWithTen(Natural(solution.number1), solution.digit).value.toString()
     }
 
     fun mulriplyNaturalWithTen(number1: Natural, digit: Int): Natural {
