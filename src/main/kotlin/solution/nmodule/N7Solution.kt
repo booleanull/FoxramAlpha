@@ -4,6 +4,7 @@ import controllers.solution.models.Solution
 import daggerSolutionComponent
 import javafx.util.converter.BigIntegerStringConverter
 import solution.base.BaseSolution
+import java.math.BigInteger
 import javax.inject.Inject
 
 /**
@@ -23,8 +24,7 @@ class N7Solution: BaseSolution, NModule {
         }
 
         val value = number1.value.toString() + stringBuilder.toString()
-        val bigIntegerStringConverter = BigIntegerStringConverter()
 
-        return Natural(bigIntegerStringConverter.fromString(value))
+        return Natural(BigInteger(value))
     }
 }
