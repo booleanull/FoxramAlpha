@@ -1,12 +1,10 @@
 package solution.nmodule
 
 import controllers.solution.models.Solution
-import daggerSolutionComponent
 import solution.base.BaseSolution
-import javax.inject.Inject
 
 /**
-@author boolenull on 17.03.2019
+@author Настя Чапурина on 17.03.2019
  */
 
 class N4Solution: BaseSolution, NModule {

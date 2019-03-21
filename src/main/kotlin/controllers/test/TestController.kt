@@ -5,8 +5,9 @@ import controllers.base.BaseController
 import controllers.test.models.TestRequest
 import controllers.test.responses.TestOkResponse
 import daggerServerComponent
-import spark.Spark
 import spark.Spark.post
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.inject.Inject
 
 /**
@@ -29,7 +30,8 @@ class TestController: BaseController {
 
     private fun initTestPostResponse() {
         post("/api/test", { req, res ->
-            println("Connected from ${req.ip()}")
+            val time = SimpleDateFormat("yyyy:MM:dd HH:mm:ss").format(Calendar.getInstance().time)
+            println("[LOG][TEST] Connected from ${req.ip()} in $time")
             val data = gson.fromJson(req.body(), TestRequest::class.java)
 
             val stringToReturn = "You got from server ${data.message}"

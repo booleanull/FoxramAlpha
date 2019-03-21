@@ -6,7 +6,7 @@ import solution.base.BaseSolution
 import javax.inject.Inject
 
 /**
-@author boolenull on 17.03.2019
+@author Акшин Гусейнов on 17.03.2019
  */
 
 class N5Solution: BaseSolution, NModule {

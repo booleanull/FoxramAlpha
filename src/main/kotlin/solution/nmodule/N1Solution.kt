@@ -1,11 +1,10 @@
 package solution.nmodule
 
 import controllers.solution.models.Solution
-import javafx.util.converter.BigIntegerStringConverter
 import solution.base.BaseSolution
 
 /**
-@author boolenull on 17.03.2019
+@author Настя Чапурина on 17.03.2019
  */
 
 class N1Solution: BaseSolution, NModule {

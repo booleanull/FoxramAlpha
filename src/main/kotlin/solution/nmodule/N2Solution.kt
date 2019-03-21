@@ -2,7 +2,6 @@ package solution.nmodule
 
 import controllers.solution.models.Solution
 import solution.base.BaseSolution
-import java.math.BigInteger
 
 /**
 @author boolenull on 17.03.2019
