@@ -37,8 +37,8 @@ class SettingsController: BaseController {
     }
 
     fun initBeforeMethod() {
-        Spark.before("*") { request, response ->
-            response.header("Access-Control-Allow-Origin", "*")
+        Spark.before("*") { req, res ->
+            res.header("Access-Control-Allow-Origin", "*")
         }
     }
 }

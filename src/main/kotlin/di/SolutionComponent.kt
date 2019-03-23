@@ -1,13 +1,13 @@
 package di
 
 import dagger.Component
-import solution.SolutionGenerator
-import solution.nmodule.*
-import solution.qmodule.Q5Solution
-import solution.qmodule.Q6Solution
-import solution.qmodule.Q7Solution
-import solution.qmodule.Q8Solution
-import solution.zmodule.Z1Solution
+import managers.solution.SolutionGenerator
+import managers.solution.nmodule.*
+import managers.solution.qmodule.Q5Solution
+import managers.solution.qmodule.Q6Solution
+import managers.solution.qmodule.Q7Solution
+import managers.solution.qmodule.Q8Solution
+import managers.solution.zmodule.Z1Solution
 import javax.inject.Singleton
 
 /**

@@ -2,9 +2,9 @@ package di
 
 import dagger.Module
 import dagger.Provides
-import solution.nmodule.*
-import solution.qmodule.*
-import solution.zmodule.*
+import managers.solution.nmodule.*
+import managers.solution.qmodule.*
+import managers.solution.zmodule.*
 import javax.inject.Singleton
 
 /**

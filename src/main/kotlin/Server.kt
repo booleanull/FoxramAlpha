@@ -3,12 +3,8 @@ import controllers.solution.SolutionController
 import controllers.test.TestController
 import di.DaggerServerComponent
 import di.DaggerSolutionComponent
-import solution.nmodule.N4Solution
-import solution.nmodule.Natural
 import spark.Spark.port
-import java.math.BigInteger
 import java.net.InetAddress
-import javax.inject.Inject
 
 /**
 @author boolenull on 18.03.2019

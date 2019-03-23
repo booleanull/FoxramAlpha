@@ -30,6 +30,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.2'
 
     kapt 'com.google.dagger:dagger-compiler:2.21'
+    testImplementation 'junit:junit:4.12'
 }
 
 jar {
@@ -51,4 +52,8 @@ compileKotlin {
 }
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+test {
+    useJUnit()
 }
