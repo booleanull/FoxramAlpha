@@ -1,0 +1,226 @@
+[
+  {
+    "type": "N-1",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Сравнение натуральных чисел: 2 - если первое больше второго, 0, если равно, 1 иначе."
+  },
+  {
+    "type": "N-2",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Проверка на ноль: если число не равно нулю, то «да» иначе «нет»"
+  },
+  {
+    "type": "N-3",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Добавление 1 к натуральному числу"
+  },
+  {
+    "type": "N-4",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Сложение натуральных чисел"
+  },
+  {
+    "type": "N-5",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Вычитание из первого большего натурального числа второго меньшего или равного"
+  },
+  {
+    "type": "N-6",
+    "number1": true,
+    "number2": false,
+    "digit": true,
+    "description": "Умножение натурального числа на цифру"
+  },
+  {
+    "type": "N-7",
+    "number1": true,
+    "number2": false,
+    "digit": true,
+    "description": "Умножение натурального числа на 10^k"
+  },
+  {
+    "type": "N-8",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Умножение натуральных чисел"
+  },
+  {
+    "type": "N-9",
+    "number1": true,
+    "number2": true,
+    "digit": true,
+    "description": "Вычитание из натурального другого натурального, умноженного на цифру для случая с неотрицательным результатом"
+  },
+  {
+    "type": "N-10",
+    "number1": true,
+    "number2": true,
+    "digit": true,
+    "description": "Вычисление первой цифры деления большего натурального на меньшее, домноженное на 10^k,где k - номер позиции этой цифры (номер считается с нуля)"
+  },
+  {
+    "type": "N-11",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Частное от деления большего натурального числа на меньшее или равное натуральное с остатком(делитель отличен от нуля)"
+  },
+  {
+    "type": "N-12",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Остаток от деления большего натурального числа на меньшее или равное натуральное с остатком(делитель отличен от нуля)"
+  },
+  {
+    "type": "N-13",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "НОД натуральных чисел"
+  },
+  {
+    "type": "N-14",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "НОК натуральных чисел"
+  },
+  {
+    "type": "Z-1",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Абсолютная величина числа, результат - натуральное"
+  },
+  {
+    "type": "Z-2",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Определение положительности числа (2 - положительное, 0 — равное нулю, 1 - отрицательное)"
+  },
+  {
+    "type": "Z-3",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Умножение целого на (-1)"
+  },
+  {
+    "type": "Z-4",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Преобразование натурального в целое"
+  },
+  {
+    "type": "Z-5",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Преобразование целого неотрицательного в натуральное"
+  },
+  {
+    "type": "Z-6",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Сложение целых чисел"
+  },
+  {
+    "type": "Z-7",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Вычитание целых чисел"
+  },
+  {
+    "type": "Z-8",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Умножение целых чисел"
+  },
+  {
+    "type": "Z-9",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Частное от деления большего целого числа на меньшее или равное натуральное с остатком(делитель отличен от нуля)"
+  },
+  {
+    "type": "Z-10",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Остаток от деления большего целого числа на меньшее или равное натуральное с остатком(делитель отличен от нуля)"
+  },
+  {
+    "type": "Q-1",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Сокращение дроби"
+  },
+  {
+    "type": "Q-2",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Проверка на целое, если рациональное число является целым, то «да», иначе «нет»"
+  },
+  {
+    "type": "Q-3",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Преобразование целого в дробное"
+  },
+  {
+    "type": "Q-4",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Преобразование дробного в целое (если знаменатель равен 1)"
+  },
+  {
+    "type": "Q-5",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Сложение дробей"
+  },
+  {
+    "type": "Q-6",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Вычитание дробей"
+  },
+  {
+    "type": "Q-7",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Умножение дробей"
+  },
+  {
+    "type": "Q-8",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Деление дробей (делитель отличен от нуля)"
+  }
+]
