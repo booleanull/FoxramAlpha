@@ -4,7 +4,7 @@ import controllers.solution.models.Solution
 import managers.solution.base.BaseSolution
 
 /**
-@author boolenull on 25.03.2019
+@author Женя Ромаев
  */
 
 class P4Solution: BaseSolution, PModule {

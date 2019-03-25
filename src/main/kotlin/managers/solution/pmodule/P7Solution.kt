@@ -9,7 +9,7 @@ import managers.solution.nmodule.Natural
 import javax.inject.Inject
 
 /**
-@author boolenull on 25.03.2019
+@author Женя Ромаев
  */
 
 class P7Solution: BaseSolution, PModule {

@@ -5,7 +5,7 @@ import managers.solution.base.BaseSolution
 import managers.solution.nmodule.Natural
 
 /**
-@author Леонид Спиридонов
+@author Виталий Зуб
  */
 
 class Z4Solution: BaseSolution, ZModule {

@@ -7,7 +7,7 @@ import managers.solution.qmodule.Q6Solution
 import javax.inject.Inject
 
 /**
-@author boolenull on 25.03.2019
+@author Максим Нигматулин
  */
 
 class P2Solution: BaseSolution, PModule {

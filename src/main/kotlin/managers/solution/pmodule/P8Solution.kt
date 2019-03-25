@@ -8,7 +8,7 @@ import managers.solution.qmodule.Q7Solution
 import javax.inject.Inject
 
 /**
-@author boolenull on 25.03.2019
+@author Женя Ромаев
  */
 
 class P8Solution: BaseSolution, PModule {

@@ -4,7 +4,7 @@ import controllers.solution.models.Solution
 import managers.solution.base.BaseSolution
 
 /**
-@author Дмитрий Овечко
+@author Леонид Никулин
  */
 
 class Q1Solution: BaseSolution, QModule {

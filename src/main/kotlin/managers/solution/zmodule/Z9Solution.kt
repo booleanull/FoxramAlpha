@@ -4,7 +4,7 @@ import controllers.solution.models.Solution
 import managers.solution.base.BaseSolution
 
 /**
-@author Эльвин Гусейнов
+@author Леонид Никулин
  */
 
 class Z9Solution: BaseSolution, ZModule {

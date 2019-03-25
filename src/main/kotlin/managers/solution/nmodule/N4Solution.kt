@@ -4,7 +4,7 @@ import controllers.solution.models.Solution
 import managers.solution.base.BaseSolution
 
 /**
-@author Акшин Гусейнов
+@author Виталий Зуб
  */
 
 class N4Solution: BaseSolution, NModule {
