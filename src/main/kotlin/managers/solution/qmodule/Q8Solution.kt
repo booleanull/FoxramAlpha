@@ -30,9 +30,6 @@ class Q8Solution: BaseSolution, QModule {
         val numerator = Fraction(frac1.split("/")[0]).value * Fraction(frac2.split("/")[1]).value
         val denominator = Fraction(frac1.split("/")[1]).value * Fraction(frac2.split("/")[0]).value
         var result = q1Solution.reduceFraction("$numerator/$denominator")
-        if(result[result.length - 1] == '1' && result[result.length - 2] == '/') {
-            result = result.replace("/1", "")
-        }
         return result
     }
 }

@@ -42,9 +42,6 @@ class Q6Solution: BaseSolution, QModule {
         val numerator = frC1.value - frC2.value
 
         var result = q1Solution.reduceFraction("$numerator/$nok")
-        if(result[result.length - 1] == '1' && result[result.length - 2] == '/') {
-            result = result.replace("/1", "")
-        }
         return result
     }
 }

@@ -3,6 +3,7 @@ package di
 import dagger.Component
 import managers.solution.SolutionGenerator
 import managers.solution.nmodule.*
+import managers.solution.pmodule.*
 import managers.solution.qmodule.Q5Solution
 import managers.solution.qmodule.Q6Solution
 import managers.solution.qmodule.Q7Solution
@@ -33,4 +34,10 @@ interface SolutionComponent {
     fun inject(q6Solution: Q6Solution)
     fun inject(q7Solution: Q7Solution)
     fun inject(q8Solution: Q8Solution)
+
+    fun inject(p1Solution: P1Solution)
+    fun inject(p2Solution: P2Solution)
+    fun inject(p3Solution: P3Solution)
+    fun inject(p7Solution: P7Solution)
+    fun inject(p8Solution: P8Solution)
 }

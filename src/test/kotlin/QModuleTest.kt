@@ -36,7 +36,7 @@ class QModuleTest {
     @Test
     fun Q5SolutionTest() {
         val solution = Q5Solution()
-        assertEquals(solution.makeResult(Solution("Q-5", "1/2", "1/2", 2)), "1")
+        assertEquals(solution.makeResult(Solution("Q-5", "1/2", "1/2", 2)), "1/1")
     }
 
     @Test
