@@ -18,15 +18,13 @@ class FormGenerator {
         daggerServerComponent.inject(this)
     }
 
+    companion object {
+        var forms: List<Form>? = null
+    }
+
     fun generate(type: String): Form? {
         var form: Form? = null
-        try {
-            val formText = String::class.java.getResource("/forms.json").readText()
-            val forms = gson.fromJson(formText, Array<Form>::class.java)
-            forms.forEach { if(it.type == type) form = it }
-        } catch(e: Exception) {
-            println("Can't load file")
-        }
+        forms?.forEach { if(it.type == type) form = it }
         return form
     }
 }
