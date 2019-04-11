@@ -3,12 +3,15 @@ package controllers.solution
 import com.google.gson.Gson
 import controllers.base.BaseController
 import controllers.base.responses.BadRequestErrorResponse
+import controllers.base.responses.BaseOkResponse
 import controllers.solution.models.FormData
 import controllers.solution.models.Solution
 import controllers.solution.responses.FormOkResponse
 import controllers.solution.responses.SolutionResponse
 import daggerServerComponent
 import managers.form.FormGenerator
+import managers.form.FormGenerator.Companion.forms
+import managers.form.models.Form
 import managers.solution.SolutionGenerator
 import spark.Spark.post
 import java.text.SimpleDateFormat
@@ -33,6 +36,9 @@ class SolutionController: BaseController {
         println("SolutionController is enabled")
         initSolution()
         initForm()
+        initRestartData()
+
+        getFormFromFile()
     }
 
     private fun initSolution() {
@@ -57,5 +63,17 @@ class SolutionController: BaseController {
 
             return@post FormOkResponse(form)
         }, gson::toJson)
+    }
+
+    private fun initRestartData() {
+        post("/api/restart", {req, res ->
+            getFormFromFile()
+            return@post BaseOkResponse()
+        }, gson::toJson)
+    }
+
+    private fun getFormFromFile() {
+        val formText = String::class.java.getResource("/forms.json").readText()
+        forms = gson.fromJson(formText, Array<Form>::class.java).toList()
     }
 }

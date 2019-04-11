@@ -19,22 +19,28 @@ val daggerSolutionComponent = DaggerSolutionComponent
         .build()
 
 fun main(args: Array<String>) {
-
-    if(args.isEmpty() || args[0].toIntOrNull() == null) {
+    if (args.isEmpty() || args[0].toIntOrNull() == null) {
         println("Post is empty")
         return
     }
 
     val port = args[0].toInt()
-    port(port)
-    println("You port - $port")
-
-    val ip = InetAddress.getLocalHost()
-    println("Current IP address : " + ip.hostAddress)
-    println("Version is 1.0")
+    initServer(port)
 
     val controllers = listOf(SettingsController(),
             SolutionController(),
             TestController())
     controllers.forEach { it.start() }
+}
+
+private fun initServer(port: Int) {
+    val version = String::class.java.getResource("/version.txt").readText()
+    val ip = InetAddress.getLocalHost()
+    port(port)
+
+    println("=======================================")
+    println("Port: $port")
+    println("IP address: ${ip.hostAddress}")
+    println("Version: $version")
+    println("=======================================\n")
 }
