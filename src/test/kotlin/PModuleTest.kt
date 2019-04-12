@@ -70,5 +70,31 @@ class PModuleTest {
     fun P8SolutionTest() {
         val solution = P8Solution()
         assertEquals(solution.makeResult(Solution("P-8", "1/2 3/2 9/2", "2/1", 0)), "1/1 3/1 9/1")
+        //assertEquals(solution.makeResult(Solution("P-8", "1/1 3/1 9/1", "2/1 1/1", 0)), "1/1 3/1 9/1")
+    }
+
+    @Test
+    fun P9SolutionTest() {
+        val solution = P9Solution()
+        assertEquals(solution.makeResult(Solution("P-9", "1/1 -12/1 0/1 -42/1", "1/1 -3/1", 0)), "1/1 -9/1 -27/1")
+    }
+
+    @Test
+    fun P10SolutionTest() {
+        val solution = P10Solution()
+        assertEquals(solution.makeResult(Solution("P-10", "1/1 -12/1 0/1 -42/1", "1/1 -3/1", 0)), "-123/1")
+    }
+
+    @Test
+    fun P11SolutionTest() {
+        val solution = P11Solution()
+        assertEquals(solution.makeResult(Solution("P-11", "1/1 2/1 1/1", "1/1 1/1", 0)), "1/1 1/1")
+    }
+
+    @Test
+    fun P12SolutionTest() {
+        val solution = P12Solution()
+        assertEquals(solution.makeResult(Solution("P-12", "1/3 1/2 1/1 0/1", "", 0)), "1/1 1/1 1/1 0/1")
+        assertEquals(solution.makeResult(Solution("P-12", "1/2 1/2 1/1 0/1", "", 0)), "3/2 1/1 1/1 0/1")
     }
 }

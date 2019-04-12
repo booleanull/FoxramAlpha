@@ -1,5 +1,6 @@
 package di
 
+import controllers.settings.SettingsController
 import controllers.solution.SolutionController
 import controllers.test.TestController
 import dagger.Component
@@ -16,6 +17,7 @@ interface ServerComponent {
 
     fun inject(testController: TestController)
     fun inject(solutionController: SolutionController)
+    fun inject(settingsController: SettingsController)
 
     fun inject(formGenerator: FormGenerator)
 }

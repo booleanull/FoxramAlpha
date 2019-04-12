@@ -12,10 +12,7 @@ class Q4Solution: BaseSolution, QModule {
 
     override fun makeResult(solution: Solution): String {
         with(convertFractionToWhole(solution.number1)) {
-            return when(this) {
-                null -> "Incorrect format"
-                else -> this.value.toString()
-            }
+            return this?.value.toString()
         }
     }
 

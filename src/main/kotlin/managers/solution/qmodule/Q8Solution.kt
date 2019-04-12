@@ -23,10 +23,6 @@ class Q8Solution: BaseSolution, QModule {
     }
 
     fun divisionFractionWithFraction(frac1: String, frac2: String): String {
-        if(!frac1.contains("/") || !frac2.contains("/")) {
-            return "Incorrect format"
-        }
-
         val numerator = Fraction(frac1.split("/")[0]).value * Fraction(frac2.split("/")[1]).value
         val denominator = Fraction(frac1.split("/")[1]).value * Fraction(frac2.split("/")[0]).value
         var result = q1Solution.reduceFraction("$numerator/$denominator")

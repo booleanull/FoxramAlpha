@@ -3,6 +3,7 @@ package di
 import dagger.Module
 import dagger.Provides
 import managers.solution.nmodule.*
+import managers.solution.pmodule.*
 import managers.solution.qmodule.*
 import managers.solution.zmodule.*
 import javax.inject.Singleton
@@ -204,5 +205,77 @@ class SolutionModule {
     @Provides
     fun provideQ8Solution(): Q8Solution {
         return Q8Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP1Solution(): P1Solution {
+        return P1Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP2Solution(): P2Solution {
+        return P2Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP3Solution(): P3Solution {
+        return P3Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP4Solution(): P4Solution {
+        return P4Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP5Solution(): P5Solution {
+        return P5Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP6Solution(): P6Solution {
+        return P6Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP7Solution(): P7Solution {
+        return P7Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP8Solution(): P8Solution {
+        return P8Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP9Solution(): P9Solution {
+        return P9Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP10Solution(): P10Solution {
+        return P10Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP11Solution(): P11Solution {
+        return P11Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP12Solution(): P12Solution {
+        return P12Solution()
     }
 }
