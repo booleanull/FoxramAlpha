@@ -222,5 +222,89 @@
     "number2": true,
     "digit": false,
     "description": "Деление дробей (делитель отличен от нуля)"
+  },
+  {
+    "type": "P-1",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Сложение многочленов"
+  },
+  {
+    "type": "P-2",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Вычитание многочленов"
+  },
+  {
+    "type": "P-3",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Умножение многочлена на рациональное число"
+  },
+  {
+    "type": "P-4",
+    "number1": true,
+    "number2": false,
+    "digit": true,
+    "description": "Умножение многочлена на x^k"
+  },
+  {
+    "type": "P-5",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Старший коэффициент многочлена"
+  },
+  {
+    "type": "P-6",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Степень многочлена"
+  },
+  {
+    "type": "P-7",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Вынесение из многочлена НОК знаменателей коэффициентов и НОД числителей"
+  },
+  {
+    "type": "P-8",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Умножение многочленов"
+  },
+  {
+    "type": "P-9",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Частное от деления многочлена на многочлен при делении с остатком"
+  },
+  {
+    "type": "P-10",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "Остаток от деления многочлена на многочлен при делении с остатком"
+  },
+  {
+    "type": "P-11",
+    "number1": true,
+    "number2": true,
+    "digit": false,
+    "description": "НОД многочленов"
+  },
+  {
+    "type": "P-12",
+    "number1": true,
+    "number2": false,
+    "digit": false,
+    "description": "Производная многочлена"
   }
 ]

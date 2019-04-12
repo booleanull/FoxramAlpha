@@ -23,10 +23,6 @@ class Q6Solution: BaseSolution, QModule {
     }
 
     fun minusFractionWithFraction(frac1: String, frac2: String): String {
-        if(!frac1.contains("/") || !frac2.contains("/")) {
-            return "Incorrect format"
-        }
-
         val fraction1 = q1Solution.reduceFraction(frac1)
         val fraction2 = q1Solution.reduceFraction(frac2)
 

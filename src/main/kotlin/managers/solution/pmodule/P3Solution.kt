@@ -1,5 +1,6 @@
 package managers.solution.pmodule
 
+import Utils.toStringList
 import controllers.solution.models.Solution
 import daggerSolutionComponent
 import managers.solution.base.BaseSolution
@@ -10,7 +11,7 @@ import javax.inject.Inject
 @author Женя Ромаев
  */
 
-class P3Solution: BaseSolution, PModule {
+class P3Solution : BaseSolution, PModule {
 
     @Inject
     lateinit var q7Solution: Q7Solution
@@ -27,12 +28,9 @@ class P3Solution: BaseSolution, PModule {
         var num1 = number1.split(" ").toMutableList()
 
         num1.forEachIndexed { index, it ->
-            num1[index] = q7Solution.mulriplyFractionWithFraction(num1[index], number2)
+            num1[index] = q7Solution.mulriplyFractionWithFraction(it, number2)
         }
 
-        return num1.toString()
-                .replace("[", "")
-                .replace("]", "")
-                .replace(",", "")
+        return num1.toStringList()
     }
 }

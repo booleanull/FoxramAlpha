@@ -3,6 +3,7 @@ package managers.solution
 import daggerSolutionComponent
 import managers.solution.base.BaseSolution
 import managers.solution.nmodule.*
+import managers.solution.pmodule.*
 import managers.solution.qmodule.*
 import managers.solution.zmodule.*
 import javax.inject.Inject
@@ -80,6 +81,31 @@ class SolutionGenerator {
     @Inject
     lateinit var q8Solution: Q8Solution
 
+    @Inject
+    lateinit var p1Solution: P1Solution
+    @Inject
+    lateinit var p2Solution: P2Solution
+    @Inject
+    lateinit var p3Solution: P3Solution
+    @Inject
+    lateinit var p4Solution: P4Solution
+    @Inject
+    lateinit var p5Solution: P5Solution
+    @Inject
+    lateinit var p6Solution: P6Solution
+    @Inject
+    lateinit var p7Solution: P7Solution
+    @Inject
+    lateinit var p8Solution: P8Solution
+    @Inject
+    lateinit var p9Solution: P9Solution
+    @Inject
+    lateinit var p10Solution: P10Solution
+    @Inject
+    lateinit var p11Solution: P11Solution
+    @Inject
+    lateinit var p12Solution: P12Solution
+
     init {
         daggerSolutionComponent.inject(this)
     }
@@ -120,6 +146,19 @@ class SolutionGenerator {
             "Q-6" -> q6Solution
             "Q-7" -> q7Solution
             "Q-8" -> q8Solution
+
+            "P-1" -> p1Solution
+            "P-2" -> p2Solution
+            "P-3" -> p3Solution
+            "P-4" -> p4Solution
+            "P-5" -> p5Solution
+            "P-6" -> p6Solution
+            "P-7" -> p7Solution
+            "P-8" -> p8Solution
+            "P-9" -> p9Solution
+            "P-10" -> p10Solution
+            "P-11" -> p11Solution
+            "P-12" -> p12Solution
             else -> null
         }
     }

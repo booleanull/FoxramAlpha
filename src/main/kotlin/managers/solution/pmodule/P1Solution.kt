@@ -1,5 +1,6 @@
 package managers.solution.pmodule
 
+import Utils.toStringList
 import controllers.solution.models.Solution
 import daggerSolutionComponent
 import managers.solution.base.BaseSolution
@@ -37,9 +38,6 @@ class P1Solution: BaseSolution, PModule {
             num1[num1.size - num2.size + index] = q5Solution.plusFractionWithFraction(num1[num1.size - num2.size + index], it)
         }
 
-        return num1.toString()
-                .replace("[", "")
-                .replace("]", "")
-                .replace(",", "")
+        return num1.toStringList()
     }
 }

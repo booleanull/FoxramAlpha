@@ -30,6 +30,7 @@ fun main(args: Array<String>) {
     val controllers = listOf(SettingsController(),
             SolutionController(),
             TestController())
+
     controllers.forEach { it.start() }
 }
 
