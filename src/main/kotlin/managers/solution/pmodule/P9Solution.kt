@@ -17,8 +17,6 @@ import javax.inject.Inject
 class P9Solution : BaseSolution, PModule {
 
     @Inject
-    lateinit var p1Solution: P1Solution
-    @Inject
     lateinit var q5Solution: Q5Solution
     @Inject
     lateinit var q7Solution: Q7Solution
@@ -33,7 +31,7 @@ class P9Solution : BaseSolution, PModule {
         return divisionPolynomialWithPolynomial(solution.number1, solution.number2)
     }
 
-    fun divisionPolynomialWithPolynomial(number1: String, number2: String): String {
+    private fun divisionPolynomialWithPolynomial(number1: String, number2: String): String {
         val num1 = number1.split(" ").toMutableList()
         val num2 = number2.split(" ").toMutableList()
 

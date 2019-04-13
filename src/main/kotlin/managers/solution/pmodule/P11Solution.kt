@@ -24,7 +24,7 @@ class P11Solution : BaseSolution, PModule {
         return nodPolynomialWithPolynomial(solution.number1, solution.number2)
     }
 
-    fun nodPolynomialWithPolynomial(number1: String, number2: String): String {
+    private fun nodPolynomialWithPolynomial(number1: String, number2: String): String {
         var num1 = number1.split(" ").toMutableList()
         var num2 = number2.split(" ").toMutableList()
 

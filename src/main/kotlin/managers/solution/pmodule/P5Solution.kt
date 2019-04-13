@@ -13,7 +13,7 @@ class P5Solution: BaseSolution, PModule {
         return elderFactor(solution.number1)
     }
 
-    fun elderFactor(number1: String): String {
+    private fun elderFactor(number1: String): String {
         return (number1.split(" ")[0])
     }
 }

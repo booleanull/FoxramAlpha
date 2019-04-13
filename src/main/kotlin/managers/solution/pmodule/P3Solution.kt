@@ -24,8 +24,8 @@ class P3Solution : BaseSolution, PModule {
         return multiplyPolynomialWithFraction(solution.number1, solution.number2)
     }
 
-    fun multiplyPolynomialWithFraction(number1: String, number2: String): String {
-        var num1 = number1.split(" ").toMutableList()
+    private fun multiplyPolynomialWithFraction(number1: String, number2: String): String {
+        val num1 = number1.split(" ").toMutableList()
 
         num1.forEachIndexed { index, it ->
             num1[index] = q7Solution.mulriplyFractionWithFraction(it, number2)
