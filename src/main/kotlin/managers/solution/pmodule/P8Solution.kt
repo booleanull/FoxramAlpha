@@ -26,7 +26,7 @@ class P8Solution : BaseSolution, PModule {
         return multiplyPolynomialWithPolynomial(solution.number1, solution.number2)
     }
 
-    fun multiplyPolynomialWithPolynomial(number1: String, number2: String): String {
+    private fun multiplyPolynomialWithPolynomial(number1: String, number2: String): String {
         val num1 = number1.split(" ").toMutableList()
         val num2 = number2.split(" ").toMutableList()
         var res = "0/1"

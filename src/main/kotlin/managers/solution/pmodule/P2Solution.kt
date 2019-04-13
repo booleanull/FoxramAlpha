@@ -24,9 +24,9 @@ class P2Solution : BaseSolution, PModule {
         return minusPolynomialWithPolynomial(solution.number1, solution.number2)
     }
 
-    fun minusPolynomialWithPolynomial(number1: String, number2: String): String {
-        var num1 = number1.split(" ").toMutableList()
-        var num2 = number2.split(" ").toMutableList()
+    private fun minusPolynomialWithPolynomial(number1: String, number2: String): String {
+        val num1 = number1.split(" ").toMutableList()
+        val num2 = number2.split(" ").toMutableList()
 
         if (num1.size < num2.size) {
             for (i in 0..(num2.size - num1.size - 1)) {

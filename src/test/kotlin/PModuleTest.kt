@@ -94,7 +94,7 @@ class PModuleTest {
     @Test
     fun P12SolutionTest() {
         val solution = P12Solution()
-        assertEquals(solution.makeResult(Solution("P-12", "1/3 1/2 1/1 0/1", "", 0)), "1/1 1/1 1/1 0/1")
-        assertEquals(solution.makeResult(Solution("P-12", "1/2 1/2 1/1 0/1", "", 0)), "3/2 1/1 1/1 0/1")
+        assertEquals(solution.makeResult(Solution("P-12", "1/3 1/2 1/1 1/1", "", 0)), "1/1 1/1 1/1")
+        assertEquals(solution.makeResult(Solution("P-12", "1/2 1/2 1/1 0/1", "", 0)), "3/2 1/1 1/1")
     }
 }

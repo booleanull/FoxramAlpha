@@ -17,8 +17,6 @@ import javax.inject.Inject
 class P10Solution : BaseSolution, PModule {
 
     @Inject
-    lateinit var p1Solution: P1Solution
-    @Inject
     lateinit var q5Solution: Q5Solution
     @Inject
     lateinit var q7Solution: Q7Solution

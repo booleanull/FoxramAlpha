@@ -27,7 +27,7 @@ class P7Solution: BaseSolution, PModule {
         return p7Function(solution.number1)
     }
 
-    fun p7Function(number1: String): String {
+    private fun p7Function(number1: String): String {
         val num1 = number1.split(" ")
         var nod = (num1[0].split("/"))[0]
         var nok = (num1[0].split("/"))[1]
