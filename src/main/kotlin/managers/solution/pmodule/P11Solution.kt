@@ -14,6 +14,8 @@ import javax.inject.Inject
 class P11Solution : BaseSolution, PModule {
 
     @Inject
+    lateinit var p1Solution: P1Solution
+    @Inject
     lateinit var p10Solution: P10Solution
 
     init {
@@ -21,7 +23,7 @@ class P11Solution : BaseSolution, PModule {
     }
 
     override fun makeResult(solution: Solution): String {
-        return nodPolynomialWithPolynomial(solution.number1, solution.number2)
+        return p1Solution.convertToNewFormat(nodPolynomialWithPolynomial(p1Solution.convertToOlderFormat(solution.number1), p1Solution.convertToOlderFormat(solution.number2)))
     }
 
     private fun nodPolynomialWithPolynomial(number1: String, number2: String): String {

@@ -1,7 +1,9 @@
 package managers.solution.pmodule
 
 import controllers.solution.models.Solution
+import daggerSolutionComponent
 import managers.solution.base.BaseSolution
+import javax.inject.Inject
 
 /**
 @author Женя Ромаев
@@ -9,8 +11,15 @@ import managers.solution.base.BaseSolution
 
 class P4Solution: BaseSolution, PModule {
 
+    @Inject
+    lateinit var p1Solution: P1Solution
+
+    init {
+        daggerSolutionComponent.inject(this)
+    }
+
     override fun makeResult(solution: Solution): String {
-        return addPolynomialZero(solution.number1, solution.digit)
+        return p1Solution.convertToNewFormat(addPolynomialZero(p1Solution.convertToOlderFormat(solution.number1), solution.digit))
     }
 
     private fun addPolynomialZero(number1: String, digit: Int): String {

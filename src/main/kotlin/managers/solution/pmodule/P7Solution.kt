@@ -18,13 +18,15 @@ class P7Solution: BaseSolution, PModule {
     lateinit var n13Solution: N13Solution
     @Inject
     lateinit var n14Solution: N14Solution
+    @Inject
+    lateinit var p1Solution: P1Solution
 
     init {
         daggerSolutionComponent.inject(this)
     }
 
     override fun makeResult(solution: Solution): String {
-        return p7Function(solution.number1)
+        return p1Solution.convertToNewFormat(p7Function(p1Solution.convertToOlderFormat(solution.number1)))
     }
 
     private fun p7Function(number1: String): String {

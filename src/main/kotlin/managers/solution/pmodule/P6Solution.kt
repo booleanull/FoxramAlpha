@@ -1,7 +1,9 @@
 package managers.solution.pmodule
 
 import controllers.solution.models.Solution
+import daggerSolutionComponent
 import managers.solution.base.BaseSolution
+import javax.inject.Inject
 
 /**
 @author Максим Нигматулин
@@ -9,8 +11,15 @@ import managers.solution.base.BaseSolution
 
 class P6Solution: BaseSolution, PModule {
 
+    @Inject
+    lateinit var p1Solution: P1Solution
+
+    init {
+        daggerSolutionComponent.inject(this)
+    }
+
     override fun makeResult(solution: Solution): String {
-        return elderFactor(solution.number1)
+        return p1Solution.convertToNewFormat(elderFactor(p1Solution.convertToOlderFormat(solution.number1)))
     }
 
     private fun elderFactor(number1: String): String {

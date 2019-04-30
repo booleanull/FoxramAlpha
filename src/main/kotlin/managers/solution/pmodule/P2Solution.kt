@@ -15,13 +15,15 @@ class P2Solution : BaseSolution, PModule {
 
     @Inject
     lateinit var q6Solution: Q6Solution
+    @Inject
+    lateinit var p1Solution: P1Solution
 
     init {
         daggerSolutionComponent.inject(this)
     }
 
     override fun makeResult(solution: Solution): String {
-        return minusPolynomialWithPolynomial(solution.number1, solution.number2)
+        return p1Solution.convertToNewFormat(minusPolynomialWithPolynomial(p1Solution.convertToOlderFormat(solution.number1), p1Solution.convertToOlderFormat(solution.number2)))
     }
 
     private fun minusPolynomialWithPolynomial(number1: String, number2: String): String {

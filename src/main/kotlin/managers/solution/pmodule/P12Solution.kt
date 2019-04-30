@@ -16,13 +16,15 @@ class P12Solution : BaseSolution, PModule {
 
     @Inject
     lateinit var q7Solution: Q7Solution
+    @Inject
+    lateinit var p1Solution: P1Solution
 
     init {
         daggerSolutionComponent.inject(this)
     }
 
     override fun makeResult(solution: Solution): String {
-        return derivativePolynonial(solution.number1)
+        return p1Solution.convertToNewFormat(derivativePolynonial(p1Solution.convertToOlderFormat(solution.number1)))
     }
 
     private fun derivativePolynonial(number: String): String {

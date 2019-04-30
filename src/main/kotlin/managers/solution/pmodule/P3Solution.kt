@@ -15,13 +15,15 @@ class P3Solution : BaseSolution, PModule {
 
     @Inject
     lateinit var q7Solution: Q7Solution
+    @Inject
+    lateinit var p1Solution: P1Solution
 
     init {
         daggerSolutionComponent.inject(this)
     }
 
     override fun makeResult(solution: Solution): String {
-        return multiplyPolynomialWithFraction(solution.number1, solution.number2)
+        return p1Solution.convertToNewFormat(multiplyPolynomialWithFraction(p1Solution.convertToOlderFormat(solution.number1), p1Solution.convertToOlderFormat(solution.number2)))
     }
 
     private fun multiplyPolynomialWithFraction(number1: String, number2: String): String {

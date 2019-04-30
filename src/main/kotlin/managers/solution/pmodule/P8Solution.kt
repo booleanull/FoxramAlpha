@@ -23,7 +23,7 @@ class P8Solution : BaseSolution, PModule {
     }
 
     override fun makeResult(solution: Solution): String {
-        return multiplyPolynomialWithPolynomial(solution.number1, solution.number2)
+        return p1Solution.convertToNewFormat(multiplyPolynomialWithPolynomial(p1Solution.convertToOlderFormat(solution.number1), p1Solution.convertToOlderFormat(solution.number2)))
     }
 
     private fun multiplyPolynomialWithPolynomial(number1: String, number2: String): String {

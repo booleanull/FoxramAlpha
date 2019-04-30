@@ -21,7 +21,53 @@ class P1Solution: BaseSolution, PModule {
     }
 
     override fun makeResult(solution: Solution): String {
-        return plusPolynomialWithPolynomial(solution.number1, solution.number2)
+        return convertToNewFormat(plusPolynomialWithPolynomial(convertToOlderFormat(solution.number1), convertToOlderFormat(solution.number2)))
+    }
+
+    fun convertToOlderFormat(number: String): String {
+        var num1 = "0/1"
+        number.split(" ").forEach {
+            val num = it.split("x^", "x")
+            val stringBuilder = StringBuilder()
+            stringBuilder.append(num[0])
+            if(num.size > 1) {
+                if(num[1].isEmpty()) {
+                    stringBuilder.append(" 0/1")
+                }
+                else {
+                    for(i in 0 until num[1].toInt()) {
+                        stringBuilder.append(" 0/1")
+                    }
+                }
+            }
+            num1 = plusPolynomialWithPolynomial(num1, stringBuilder.toString())
+        }
+        println(num1)
+        return num1
+    }
+
+    fun convertToNewFormat(number: String): String {
+        val stringBuilder = StringBuilder()
+
+        val list = number.split(" ")
+        list.forEachIndexed { index, s ->
+            if(s != "0/1") {
+                val ind = list.size - index
+                stringBuilder.append(s)
+                if(ind == 2) {
+                    stringBuilder.append("x")
+                }
+                else if(ind >= 3) {
+                    stringBuilder.append("x^")
+                    stringBuilder.append(ind - 1)
+                }
+                stringBuilder.append(" ")
+            }
+        }
+        if(stringBuilder.isEmpty()) {
+            stringBuilder.append("0/1 ")
+        }
+        return stringBuilder.substring(0, stringBuilder.length - 1).toString()
     }
 
     fun plusPolynomialWithPolynomial(number1: String, number2: String): String {

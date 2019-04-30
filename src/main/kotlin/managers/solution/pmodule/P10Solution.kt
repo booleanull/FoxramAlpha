@@ -22,13 +22,15 @@ class P10Solution : BaseSolution, PModule {
     lateinit var q7Solution: Q7Solution
     @Inject
     lateinit var q8Solution: Q8Solution
+    @Inject
+    lateinit var p1Solution: P1Solution
 
     init {
         daggerSolutionComponent.inject(this)
     }
 
     override fun makeResult(solution: Solution): String {
-        return remainderPolynomialWithPolynomial(solution.number1, solution.number2)
+        return p1Solution.convertToNewFormat(remainderPolynomialWithPolynomial(p1Solution.convertToOlderFormat(solution.number1), p1Solution.convertToOlderFormat(solution.number2)))
     }
 
     fun remainderPolynomialWithPolynomial(number1: String, number2: String): String {

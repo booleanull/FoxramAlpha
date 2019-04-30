@@ -12,20 +12,21 @@ class PModuleTest {
     @Test
     fun P1SolutionTest() {
         val solution = P1Solution()
-        assertEquals(solution.makeResult(Solution("P-1", "3/1 1/2", "1/2 7/1 1/2", 2)), "1/2 10/1 1/1")
-        assertEquals(solution.makeResult(Solution("P-1", "1/2 7/1 1/2", "3/1 1/2", 2)), "1/2 10/1 1/1")
-        assertEquals(solution.makeResult(Solution("P-1", "4/1 3/1 2/1 1/1", "1/1 2/1 3/1 4/1", 0)), "5/1 5/1 5/1 5/1")
-        assertEquals(solution.makeResult(Solution("P-1", "1/2 0/1 0/1 1/1", "1/1 -1/2 0/1 0/1 2/1", 0)), "1/1 0/1 0/1 0/1 3/1")
-        assertEquals(solution.makeResult(Solution("P-1", "0/1", "-1/1", 0)), "-1/1")
+        assertEquals(solution.convertToNewFormat("1/1 0/1 0/1 0/1 0/1"), "1/1x^4")
+        assertEquals(solution.makeResult(Solution("P-1", "3/1x 1/2", "1/2x^2 7/1x 1/2", 2)), "1/2x^2 10/1x 1/1")
+        assertEquals(solution.makeResult(Solution("P-1", "1/2x^2 7/1x 1/2", "3/1x 1/2", 2)), "1/2x^2 10/1x 1/1")
+        assertEquals(solution.makeResult(Solution("P-1", "4/1x^3 3/1x^2 2/1x 1/1", "1/1x^3 2/1x^2 3/1x 4/1", 0)), "5/1x^3 5/1x^2 5/1x 5/1")
+        assertEquals(solution.makeResult(Solution("P-1", "1/2x^3 1/1", "1/1x^4 -1/2x^3 2/1x", 0)), "1/1x^4 2/1x 1/1")
+        assertEquals(solution.makeResult(Solution("P-1", "0/1", "-1/1x", 0)), "-1/1x")
     }
 
     @Test
     fun P2SolutionTest() {
         val solution = P2Solution()
-        assertEquals(solution.makeResult(Solution("P-2", "3/1 1/2", "1/2 7/1 1/2", 2)), "-1/2 -4/1 0/1")
-        assertEquals(solution.makeResult(Solution("P-2", "3/1 0/1 2/1 1/1", "3/1 0/1 2/1 1/1", 0)), "0/1 0/1 0/1 0/1")
-        assertEquals(solution.makeResult(Solution("P-2", "2/4 2/2 2/1", "1/1 1/1 1/1", 0)), "-1/2 0/1 1/1")
-        assertEquals(solution.makeResult(Solution("P-2", "0/1", "-4/2 4/1", 0)), "2/1 -4/1")
+        assertEquals(solution.makeResult(Solution("P-2", "3/1x 1/2", "1/2x^2 7/1x 1/2", 2)), "-1/2x^2 -4/1x")
+        assertEquals(solution.makeResult(Solution("P-2", "3/1x^3 2/1x 1/1", "3/1x^3 2/1x 1/1", 0)), "0/1")
+        assertEquals(solution.makeResult(Solution("P-2", "2/4x^2 2/2x 2/1", "1/1x^2 1/1x 1/1", 0)), "-1/2x^2 1/1")
+        assertEquals(solution.makeResult(Solution("P-2", "0/1", "-4/2x 4/1", 0)), "2/1x -4/1")
     }
 
     @Test
