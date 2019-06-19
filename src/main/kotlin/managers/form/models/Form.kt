@@ -12,7 +12,6 @@ data class Form(@Expose
                 val number1: Boolean,
                 @Expose
                 val number2: Boolean,
-                @Expose
-                val digit: Boolean,
+                @Expose val number3: Boolean, @Expose val digit: Boolean, @Expose val title: String,
                 @Expose
                 val description: String)

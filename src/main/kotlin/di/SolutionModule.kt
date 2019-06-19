@@ -278,4 +278,34 @@ class SolutionModule {
     fun provideP12Solution(): P12Solution {
         return P12Solution()
     }
+
+    @Singleton
+    @Provides
+    fun provideP13Solution(): P13Solution {
+        return P13Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP14Solution(): P14Solution {
+        return P14Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP15Solution(): P15Solution {
+        return P15Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP16Solution(): P16Solution {
+        return P16Solution()
+    }
+
+    @Singleton
+    @Provides
+    fun provideP17Solution(): P17Solution {
+        return P17Solution()
+    }
 }

@@ -105,6 +105,16 @@ class SolutionGenerator {
     lateinit var p11Solution: P11Solution
     @Inject
     lateinit var p12Solution: P12Solution
+    @Inject
+    lateinit var p13Solution: P13Solution
+    @Inject
+    lateinit var p14Solution: P14Solution
+    @Inject
+    lateinit var p15Solution: P15Solution
+    @Inject
+    lateinit var p16Solution: P16Solution
+    @Inject
+    lateinit var p17Solution: P17Solution
 
     init {
         daggerSolutionComponent.inject(this)
@@ -159,6 +169,11 @@ class SolutionGenerator {
             "P-10" -> p10Solution
             "P-11" -> p11Solution
             "P-12" -> p12Solution
+            "P-13" -> p13Solution
+            "P-14" -> p14Solution
+            "P-15" -> p15Solution
+            "P-16" -> p16Solution
+            "P-17" -> p17Solution
             else -> null
         }
     }

@@ -1,6 +1,5 @@
 package managers.solution.pmodule
 
-import Utils.toStringList
 import controllers.solution.models.Solution
 import daggerSolutionComponent
 import managers.solution.base.BaseSolution
@@ -24,6 +23,12 @@ class P10Solution : BaseSolution, PModule {
     lateinit var q8Solution: Q8Solution
     @Inject
     lateinit var p1Solution: P1Solution
+    @Inject
+    lateinit var p9Solution: P9Solution
+    @Inject
+    lateinit var p8Solution: P8Solution
+    @Inject
+    lateinit var p7Solution: P7Solution
 
     init {
         daggerSolutionComponent.inject(this)
@@ -34,20 +39,24 @@ class P10Solution : BaseSolution, PModule {
     }
 
     fun remainderPolynomialWithPolynomial(number1: String, number2: String): String {
-        val num1 = number1.split(" ").toMutableList()
-        val num2 = number2.split(" ").toMutableList()
+        val del = p9Solution.divisionPolynomialWithPolynomial(number1, number2)
+        val um = p8Solution.multiplyPolynomialWithPolynomial(number2, del)
+        val ums = p8Solution.multiplyPolynomialWithPolynomial(um, "-1/1")
 
-        val out = num1
-        val normalizer = num2[0]
-        val separator = num1.size - num2.size + 1
-        for (i in 0 until separator) {
-            out[i] = q8Solution.divisionFractionWithFraction(out[i], normalizer)
-            val coef = out[i]
-            if (coef != "0/1") {
-                for (j in 1 until num2.size) out[i + j] = q5Solution.plusFractionWithFraction(out[i + j], q7Solution.mulriplyFractionWithFraction(q7Solution.mulriplyFractionWithFraction(num2[j], "-1/1"), coef))
+        val plusPolynomialWithPolynomial = p1Solution.plusPolynomialWithPolynomial(number1, ums)
+        var f = false
+        val stringBuilder = StringBuilder()
+        plusPolynomialWithPolynomial.split(" ").forEach { s ->
+            if(s != "0/1" || f) {
+                stringBuilder.append("$s ")
+
+            }
+            if(s != "0/1") {
+                f = true
             }
         }
-
-        return out.subList(separator, num1.size).toStringList()
+        if(stringBuilder.toString().isEmpty()) return "0/1"
+        var str = stringBuilder.toString().substring(0, stringBuilder.length - 1)
+        return str //p9Solution.divisionPolynomialWithPolynomial(str, p7Solution.p7Function(str))
     }
 }

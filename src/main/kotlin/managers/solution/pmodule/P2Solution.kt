@@ -26,7 +26,7 @@ class P2Solution : BaseSolution, PModule {
         return p1Solution.convertToNewFormat(minusPolynomialWithPolynomial(p1Solution.convertToOlderFormat(solution.number1), p1Solution.convertToOlderFormat(solution.number2)))
     }
 
-    private fun minusPolynomialWithPolynomial(number1: String, number2: String): String {
+    fun minusPolynomialWithPolynomial(number1: String, number2: String): String {
         val num1 = number1.split(" ").toMutableList()
         val num2 = number2.split(" ").toMutableList()
 

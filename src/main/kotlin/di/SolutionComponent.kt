@@ -47,4 +47,9 @@ interface SolutionComponent {
     fun inject(p10Solution: P10Solution)
     fun inject(p11Solution: P11Solution)
     fun inject(p12Solution: P12Solution)
+    fun inject(p13Solution: P13Solution)
+    fun inject(p14Solution: P14Solution)
+    fun inject(p15Solution: P15Solution)
+    fun inject(p16Solution: P16Solution)
+    fun inject(p17Solution: P17Solution)
 }

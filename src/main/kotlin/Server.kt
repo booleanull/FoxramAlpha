@@ -5,6 +5,8 @@ import di.DaggerServerComponent
 import di.DaggerSolutionComponent
 import spark.Spark.port
 import java.net.InetAddress
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
 @author boolenull on 18.03.2019
@@ -35,6 +37,8 @@ fun main(args: Array<String>) {
 }
 
 private fun initServer(port: Int) {
+    val sdf = SimpleDateFormat("hh:mm dd/MM/yyyy")
+    val date = sdf.format(Date())
     val version = String::class.java.getResource("/version.txt").readText()
     val ip = InetAddress.getLocalHost()
     port(port)
@@ -43,5 +47,6 @@ private fun initServer(port: Int) {
     println("Port: $port")
     println("IP address: ${ip.hostAddress}")
     println("Version: $version")
+    println("Date: $date")
     println("=======================================\n")
 }

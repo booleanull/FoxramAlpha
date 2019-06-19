@@ -14,7 +14,7 @@ class N13Solution: BaseSolution, NModule {
     }
 
     fun nodNaturalWithNatural(number1: Natural, number2: Natural): Natural {
-        while(number2.value !== 0.toBigInteger()) {
+        while(number2.value != 0.toBigInteger()) {
             val tmp = number1.value % number2.value
             number1.value = number2.value
             number2.value = tmp

@@ -11,6 +11,4 @@ data class Solution(@Expose
                     @Expose
                     val number1: String,
                     @Expose
-                    val number2: String,
-                    @Expose
-                    val digit: Int)
+                    val number2: String, @Expose val number3: String, @Expose val digit: Int)

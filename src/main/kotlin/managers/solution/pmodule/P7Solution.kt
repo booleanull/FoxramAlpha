@@ -29,7 +29,7 @@ class P7Solution: BaseSolution, PModule {
         return p1Solution.convertToNewFormat(p7Function(p1Solution.convertToOlderFormat(solution.number1)))
     }
 
-    private fun p7Function(number1: String): String {
+    fun p7Function(number1: String): String {
         val num1 = number1.split(" ")
         var nod = (num1[0].split("/"))[0]
         var nok = (num1[0].split("/"))[1]

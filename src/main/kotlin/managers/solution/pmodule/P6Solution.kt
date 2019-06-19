@@ -22,7 +22,7 @@ class P6Solution: BaseSolution, PModule {
         return p1Solution.convertToNewFormat(elderFactor(p1Solution.convertToOlderFormat(solution.number1)))
     }
 
-    private fun elderFactor(number1: String): String {
+    fun elderFactor(number1: String): String {
         return ((number1.split(" ")).size - 1).toString()
     }
 }
