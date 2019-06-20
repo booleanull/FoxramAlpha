@@ -4,10 +4,9 @@
 ## What was used in the project?
 0. [Kotlin](https://kotlinlang.org/)
 1. [Spark](http://sparkjava.com/)
-2. [Hibernate](https://github.com/hibernate/)
-3. [Dagger2](https://github.com/google/dagger)
-4. [Gson](https://github.com/google/gson)
-5. [JUnit](https://junit.org/junit5/)
+2. [Dagger2](https://github.com/google/dagger)
+3. [Gson](https://github.com/google/gson)
+4. [JUnit](https://junit.org/junit5/)
 
 ## What is FoxramAlpha?
 FoxramAlpha is a computer algebra system that allows calculations with large numbers. A complete list of service features can be found at the [link](https://docs.google.com/document/d/1Dv_6AIhxg_3ezu6VMcEnMpyfRzgym9l8PmE4ULGfjgM/edit). A distinctive feature of FoxramAlpha is the work with polynomials and work with them in algorithms of discrete mathematics.
